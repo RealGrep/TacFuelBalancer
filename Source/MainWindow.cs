@@ -191,6 +191,10 @@ namespace Tac
             GUILayout.EndScrollView();
 
             GUILayout.BeginHorizontal();
+            if (GUILayout.Toggle((settings.RateMultiplier == 1000.0), "x1000", buttonStyle))
+            {
+                settings.RateMultiplier = 1000.0;
+            }
             if (GUILayout.Toggle((settings.RateMultiplier == 100.0), "x100", buttonStyle))
             {
                 settings.RateMultiplier = 100.0;
